@@ -147,6 +147,13 @@ form button:hover {
 
 
 select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 1px;
+    border-radius: 1px;
+
     padding: 0.9rem;
     width: 100%;
 
@@ -198,7 +205,6 @@ select {
 
     
     .select {
-        /* margin: .7rem 0 0 0; */
         width: 10rem;
     }
 
@@ -270,7 +276,7 @@ select {
 @media (max-width: 458px) {
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
     form input, form button {
         font-size: 1.5rem;
