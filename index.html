@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <div class="todo">
+        <form class="todo__form">
+            <div class="input-wrapper">
+                <input class="todo__input" type="text" placeholder="What you need to do?" onfocus="this.placeholder=''" onblur="this.placeholder='What you need to do?'">
+                <button class="todo__button">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </div>
+            
+            <div class="select">
+                <select name="todos"  class="select__filter">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incompleted">Incompleted</option>
+                </select>
+            </div>
+           
+        </form>
+        <div class="todo__container">
+            <ul class="todo__list"></ul>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

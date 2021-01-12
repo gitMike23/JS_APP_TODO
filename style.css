@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e3c35d, #d88771);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: scroll;
+}
+
+header {
+    font-size: 2rem;
+}
+
+header, form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input::placeholder {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #c7aea7
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+
+
+form input:focus,
+form button:focus  {
+    outline-color: #d88771;
+}
+
+form button {
+    color: #d88771;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    background: #d88771;
+    color: white;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+ 
+
+.todo__form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.todo__container {
+    max-width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.todo__list {
+
+    width: 50%;
+   
+    list-style: none;
+}
+
+.todo__block {
+    margin: .8rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+
+}
+
+.todo__block li {
+    flex: 1;
+}
+
+.todo__block button {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+.todo__trash {
+    background: #ff6f47;
+}
+.todo__trash:focus {
+    outline-color: #ff6f47;
+}
+
+.todo__complete {
+    background: #49cc49;
+}
+.todo__complete:focus {
+    outline-color: #49cc49;
+}
+
+
+.todo__item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+select {
+    padding: 0.9rem;
+    width: 100%;
+
+    color: #ff6f47;
+    font-size: 1.3rem;
+    cursor: pointer;
+    outline-color: white;
+    border: none;
+}
+
+
+
+
+.select {
+    margin: 0 0 0 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 13rem;
+}
+
+.select::after {
+    content: "\25BC";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    padding: 1rem;
+    background-color: #ff6f47;
+    
+    pointer-events: none;
+
+    transition: all 0.4s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #ff6f47;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 812px) {
+
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    
+    .select {
+        /* margin: .7rem 0 0 0; */
+        width: 10rem;
+    }
+
+    .select::after {
+        padding: 0.7rem;
+    }
+
+    select {
+        font-size: 1.1rem;
+        padding: .7rem;
+    }
+
+    .todo__container {
+        padding: 1rem 0;
+    }
+    .todo {
+        padding: 1.5rem 0;
+    }
+
+    .todo__form {
+        /* flex-direction: column; */
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .todo__block {
+        font-size: 1.2rem;
+    }
+
+
+    input {
+        padding: 0.7rem;
+        font-size: 1.6rem;
+    }
+
+    form input::placeholder {
+        font-size: 1.3rem;
+
+    }
+
+}
+
+@media (max-width: 733px) {
+    .todo__form {
+        flex-direction: column;
+    }
+
+    .todo__list {
+        width: 73%;
+    }
+
+    .select {
+        margin: .6rem 0 0 0;
+    }
+}
+
+@media (max-width: 612px) {
+    .todo__list {
+        width: 87%;
+    }   
+}
+
+@media (max-width: 530px) {
+    .todo__list {
+        width: 100%;
+    }   
+}
+
+@media (max-width: 458px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+    form input, form button {
+        font-size: 1.5rem;
+        padding: 0.6rem;
+    }
+    form button {
+        font-size: 1.9rem;
+        padding: 0.37rem;
+    }
+
+    .todo__container {
+        max-width: 97%;
+    }
+}
